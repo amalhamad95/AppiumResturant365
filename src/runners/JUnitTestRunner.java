@@ -8,10 +8,7 @@ import tests.InventoryCountTests;
 import tests.LoginTest;
 
 @RunWith(Suite.class)
-@SuiteClasses({ //
-		LoginTest.class, //
-		InventoryCountTests.class //
-})
+@SuiteClasses({ LoginTest.class, InventoryCountTests.class })
 public class JUnitTestRunner {
 
 }

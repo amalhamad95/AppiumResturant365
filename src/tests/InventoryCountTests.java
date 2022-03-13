@@ -16,18 +16,17 @@ public class InventoryCountTests {
 
 	InventoryCountActions actions = new InventoryCountActions();
 	InventoryCountAssertions assertions = new InventoryCountAssertions();
+	Random random = new Random();
+	int quantity = random.nextInt(99 - 1 + 1) + 1;
 
 	StorageLocation storageLocation = new StorageLocation();
 	StorageItem storageItem = new StorageItem();
 
 	@Test
 	public void TC01_verifyManagerCanNavigateToInventoryCount() {
-		actions.openNavigationMenu()//
-				.navigateToInventoryCount();
+		actions.openNavigationMenu().navigateToInventoryCount();
 
-		assertions.//
-				verifyInventoryCountIsOpened()//
-				.verifyInProgressTabIsSelected();
+		assertions.verifyInventoryCountIsOpened().verifyInProgressTabIsSelected();
 	}
 
 	@Test
@@ -69,12 +68,17 @@ public class InventoryCountTests {
 
 	@Test
 	public void TC07_verifyManagerCanChangeItemQuantity() {
-		Random random = new Random();
-		int quantity = random.nextInt(99 - 1 + 1) + 1;
+		actions.typeInItemQuantityInput(quantity + "").closeItemDetailsDialog();
+	}
 
-		actions//
-				.typeInItemQuantityInput(quantity + "")//
-				.closeItemDetailsDialog();
+	@Test
+	public void TC08_verifyItemQuantityChanged() {
+		assertions.verifyItemQuantityReflected(quantity + "");
+	}
+
+	@Test
+	public void TC09_verifyTotalCosts() {
+		assertions.verifyTotalCostChanges();
 	}
 
 }
