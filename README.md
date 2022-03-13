@@ -1,11 +1,11 @@
 # restaurant 365
 <a href="https://github.com/amalhamad95/AppiumResturant365/blob/main/src/runners/JUnitTestRunner.java" alt="Contributors">
   <img src="https://img.shields.io/badge/-Contributors-blueviolet">
-  <img src="https://img.shields.io/badge/-Amal-brightgreen">
-  <img src="https://img.shields.io/badge/-Tasneem-green">
+  <img src="https://img.shields.io/badge/-Amal-blue">
+  <img src="https://img.shields.io/badge/-Tasneem-brightgreen">
   <img src="https://img.shields.io/badge/-Norhan-yellow">
   <img src="https://img.shields.io/badge/-Yasmeen-orange">
-  <img src="https://img.shields.io/badge/-Mohammed-blue">
+  <img src="https://img.shields.io/badge/-Mohammed-green">
    <img src="https://img.shields.io/badge/-appium-gray">
    <img src="https://img.shields.io/badge/-junit-red">
 </a>
