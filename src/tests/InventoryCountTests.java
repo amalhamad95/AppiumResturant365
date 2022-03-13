@@ -17,12 +17,9 @@ public class InventoryCountTests {
 
 	@Test
 	public void TC01_verifyManagerCanNavigateToInventoryCount() {
-		actions.openNavigationMenu()//
-				.navigateToInventoryCount();
+		actions.openNavigationMenu().navigateToInventoryCount();
 
-		assertions.//
-				verifyInventoryCountIsOpened()//
-				.verifyInProgressTabIsSelected();
+		assertions.verifyInventoryCountIsOpened().verifyInProgressTabIsSelected();
 	}
 
 	@Test

@@ -1,6 +1,5 @@
 package tests;
 
-import java.io.File;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.time.Duration;
@@ -29,17 +28,12 @@ public class BaseTest {
 
 	@BeforeClass
 	public static void driverSetUp() {
-		caps.setCapability("deviceName", "Hope95");
-//		caps.setCapability("udid", "TMF4C19509001736");
+		caps.setCapability("deviceName", "Pixel_2_API_30");
 		caps.setCapability("platformName", "Android");
-//		caps.setCapability("platformVersion", "10");
-		caps.setCapability(MobileCapabilityType.AUTOMATION_NAME, "uiautomator2");
-
-		File app = new File("app\\R365dev.apk");
-		caps.setCapability(MobileCapabilityType.APP, app.getAbsolutePath());
-
-//		caps.setCapability("appPackage", "com.restaurant365.dev");
-//		caps.setCapability("appActivity", "com.restaurant365.ui.login.LoginActivity");
+		caps.setCapability("app", "F:\\TestNGProj\\repoGFA\\repoGFA\\src\\app.apk");
+		caps.setCapability(MobileCapabilityType.AUTOMATION_NAME,"uiautomator2");
+		caps.setCapability("appPackage", "com.restaurant365.dev");
+		caps.setCapability("appActivity", "com.restaurant365.ui.splash.SplashActivity");
 
 		try {
 			driver = new AndroidDriver<MobileElement>(new URL("http://127.0.0.1:4723/wd/hub"), caps);
