@@ -65,6 +65,9 @@ public class InventoryCount extends BaseTest {
 
 	@AndroidFindBy(id = "tv_total_cost")
 	List<MobileElement> tvItemTotalCost;
+	
+	@AndroidFindBy(id = "btn_enter")
+	MobileElement enterElement;
 
 	@AndroidFindBy(id = "btn_enter")
 	MobileElement enterElement;

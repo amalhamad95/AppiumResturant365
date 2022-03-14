@@ -1,6 +1,5 @@
 package tests;
 
-import java.io.File;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.time.Duration;
@@ -28,10 +27,8 @@ public class BaseTest {
 
 	@BeforeClass
 	public static void driverSetUp() {
-		caps.setCapability("deviceName", "Hope95");
-//		caps.setCapability("udid", "TMF4C19509001736");
+		caps.setCapability("deviceName", "Pixel_2_API_30");
 		caps.setCapability("platformName", "Android");
-//		caps.setCapability("platformVersion", "10");
 		caps.setCapability(MobileCapabilityType.AUTOMATION_NAME, "uiautomator2");
 
 		File app = new File("app\\R365dev.apk");

@@ -14,6 +14,8 @@ public class InventoryCountTests {
 
 	InventoryCountActions actions = new InventoryCountActions();
 	InventoryCountAssertions assertions = new InventoryCountAssertions();
+	Random random = new Random();
+	int quantity = random.nextInt(99 - 1 + 1) + 1;
 
 //	Random random = new Random();
 //	int quantity = random.nextInt(99 - 1 + 1) + 1;
@@ -23,8 +25,7 @@ public class InventoryCountTests {
 
 	@Test
 	public void TC01_verifyManagerCanNavigateToInventoryCount() {
-		actions.openNavigationMenu()//
-				.navigateToInventoryCount();
+		actions.openNavigationMenu().navigateToInventoryCount();
 
 		assertions//
 				.verifyInventoryCountIsOpened()//
@@ -76,6 +77,7 @@ public class InventoryCountTests {
 
 		actions.closeItemDetailsDialog();
 //		actions.typeInItemQuantityInput(quantity + "").closeItemDetailsDialog();
+
 	}
 
 	@Test

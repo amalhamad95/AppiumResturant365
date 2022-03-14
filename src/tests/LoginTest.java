@@ -12,15 +12,11 @@ public class LoginTest extends BaseTest {
 
 	@Test
 	public void loginToApp() throws InterruptedException {
-		loginActions.typeInUserName("tester1")//
-				.clickNextButton()//
-				.typeInPassword("123")//
-				.clickLoginButton();
+		loginActions.typeInUserName("tester1").clickNextButton().typeInPassword("123").clickLoginButton();
 
 		System.out.println("Login Successfully");
 
-		loginAssertions//
-				.verifyDashboard();
+		loginAssertions.verifyDashboard();
 		System.out.println("Assertion Successfully");
 	}
 
