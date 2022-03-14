@@ -1,6 +1,7 @@
 package ui.InventoryCount;
 
 import java.util.List;
+import java.util.Random;
 
 import helpers.Helper;
 import io.appium.java_client.MobileElement;
@@ -80,7 +81,21 @@ public class InventoryCountActions {
 		page.etDialogItemAmount.clear();
 		page.etDialogItemAmount.sendKeys(quantity);
 		BaseTest.driver.hideKeyboard();
+		page.btnDialogEnter.click();
 		return this;
+	}
+
+	public int fillQuantityInput() {
+		page.btn_clear.click();
+		Random random = new Random();
+		int firstNum = random.nextInt(9 - 0 + 1) + 0;
+		int secondNum = random.nextInt(9 - 0 + 1) + 0;
+		MobileElement[] calculatorNumberElements = { page.btn_num_0, page.btn_num_1, page.btn_num_2, page.btn_num_3,
+				page.btn_num_4, page.btn_num_5, page.btn_num_6, page.btn_num_7, page.btn_num_8, page.btn_num_9 };
+		calculatorNumberElements[firstNum].click();
+		calculatorNumberElements[secondNum].click();
+		int quantity = Integer.parseInt(firstNum + "" + secondNum);
+		return quantity;
 	}
 
 	public InventoryCountActions closeItemDetailsDialog() {

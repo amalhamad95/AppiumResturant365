@@ -69,6 +69,9 @@ public class InventoryCount extends BaseTest {
 	@AndroidFindBy(id = "btn_enter")
 	MobileElement enterElement;
 
+	@AndroidFindBy(id = "btn_enter")
+	MobileElement enterElement;
+
 	/// --------------------- Item Details Dialog ---------------------
 	@AndroidFindBy(id = "design_bottom_sheet")
 	MobileElement itemDialog;
@@ -88,8 +91,35 @@ public class InventoryCount extends BaseTest {
 	@AndroidFindBy(id = "et_unit_amount_1")
 	MobileElement etDialogItemAmount;
 
+	@AndroidFindBy(id = "btn_enter")
+	MobileElement btnDialogEnter;
+
 	@AndroidFindBy(id = "iv_close")
 	MobileElement imvCloseDialog;
+
+	/// --------------------- Calculator ---------------------
+	@AndroidFindBy(id = "btn_clear")
+	MobileElement btn_clear;
+	@AndroidFindBy(id = "btn_num_0")
+	MobileElement btn_num_0;
+	@AndroidFindBy(id = "btn_num_1")
+	MobileElement btn_num_1;
+	@AndroidFindBy(id = "btn_num_2")
+	MobileElement btn_num_2;
+	@AndroidFindBy(id = "btn_num_3")
+	MobileElement btn_num_3;
+	@AndroidFindBy(id = "btn_num_4")
+	MobileElement btn_num_4;
+	@AndroidFindBy(id = "btn_num_5")
+	MobileElement btn_num_5;
+	@AndroidFindBy(id = "btn_num_6")
+	MobileElement btn_num_6;
+	@AndroidFindBy(id = "btn_num_7")
+	MobileElement btn_num_7;
+	@AndroidFindBy(id = "btn_num_8")
+	MobileElement btn_num_8;
+	@AndroidFindBy(id = "btn_num_9")
+	MobileElement btn_num_9;
 
 	/// --------------------- Totals ---------------------
 	@AndroidFindBy(id = "tv_count_total")

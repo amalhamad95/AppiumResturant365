@@ -1,10 +1,12 @@
 package ui.InventoryCount;
 
+import java.text.DecimalFormat;
 import java.util.List;
 
 import org.junit.Assert;
 import org.junit.Test;
 
+import helpers.Helper;
 import io.appium.java_client.MobileElement;
 import models.StorageItem;
 import tests.BaseTest;
@@ -95,6 +97,54 @@ public class InventoryCountAssertions {
 		return this;
 	}
 
+//	public InventoryCountAssertions verifyItemQuantityReflected(int position, int expectedQty) {
+//		BaseTest.waitVisibilityOf(page.tvItemUnitAndQty.get(position));
+//		int quantity = Helper.convertStringToInteger(page.tvItemUnitAndQty.get(position));
+////		Assert.assertTrue(quantity == expectedQty);
+//
+//		double price = Helper.convertStringToDouble(page.tvItemCost.get(position));
+//		double cost = Helper.convertStringToDouble(page.tvItemTotalCost.get(position));
+//
+//		System.out.println("quantity  " + quantity);
+//		System.out.println("price  " + price);
+//		System.out.println("cost  " + cost);
+//
+//		double expectedCost = quantity * price;
+//		Assert.assertTrue(cost == expectedCost);
+//
+//		return this;
+//	}
+
+	@Test
+	public InventoryCountAssertions verifyItemQuantityReflected(int quantity) {
+		int qyt = Helper.convertStringToInteger(page.tvItemUnitAndQty.get(0));
+		System.out.println("qyt  " + qyt);
+		System.out.println("quantity  " + quantity);
+//		Assert.assertTrue(qyt.contains(quantity + ""));
+
+		double price = Helper.convertStringToDouble(page.tvItemCost.get(0));
+		double cost = Helper.convertStringToDouble(page.tvItemTotalCost.get(0));
+
+		System.out.println("price  " + price);
+		System.out.println("cost  " + cost);
+		String expectedCost = new DecimalFormat("##.##").format(price * qyt);
+		System.out.println("expected  " + expectedCost);
+		Assert.assertTrue(cost == Double.parseDouble(expectedCost));
+		return this;
+	}
+
+	@Test
+	public InventoryCountAssertions verifyTotalCostChanges() {
+		List<MobileElement> itemsCosts = page.tvItemTotalCost;
+		double totalCosts = 0;
+		for (MobileElement cost : itemsCosts) {
+			totalCosts += Helper.convertStringToDouble(cost);
+		}
+		double expectedCost = Helper.convertStringToDouble(page.tvCountTotal);
+		Assert.assertTrue(totalCosts == expectedCost);
+		System.out.println("totalCosts:  " + totalCosts + " **** expectedCost: " + expectedCost);
+		return this;
+	}
 	@SuppressWarnings("deprecation")
 	@Test
 	public InventoryCountAssertions verifyItemQuantityReflected(String quantity) {

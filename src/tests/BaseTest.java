@@ -22,7 +22,6 @@ public class BaseTest {
 	public static final long WAIT = 3 * 1000;
 
 	public BaseTest() {
-//		PageFactory.initElements(new AppiumFieldDecorator(driver), this);
 		PageFactory.initElements(new AppiumFieldDecorator(driver, Duration.ofSeconds(WAIT)), this);
 	}
 
@@ -30,8 +29,11 @@ public class BaseTest {
 	public static void driverSetUp() {
 		caps.setCapability("deviceName", "Pixel_2_API_30");
 		caps.setCapability("platformName", "Android");
-		caps.setCapability("app", "F:\\TestNGProj\\repoGFA\\repoGFA\\src\\app.apk");
-		caps.setCapability(MobileCapabilityType.AUTOMATION_NAME,"uiautomator2");
+		caps.setCapability(MobileCapabilityType.AUTOMATION_NAME, "uiautomator2");
+
+		File app = new File("app\\R365dev.apk");
+		caps.setCapability(MobileCapabilityType.APP, app.getAbsolutePath());
+
 		caps.setCapability("appPackage", "com.restaurant365.dev");
 		caps.setCapability("appActivity", "com.restaurant365.ui.splash.SplashActivity");
 

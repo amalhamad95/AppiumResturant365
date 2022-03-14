@@ -9,6 +9,7 @@ import tests.LoginTest;
 
 @RunWith(Suite.class)
 @SuiteClasses({ LoginTest.class, InventoryCountTests.class })
+
 public class JUnitTestRunner {
 
 }
