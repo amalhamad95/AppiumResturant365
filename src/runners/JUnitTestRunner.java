@@ -12,6 +12,7 @@ import tests.LoginTest;
 		LoginTest.class, //
 		InventoryCountTests.class //
 })
+
 public class JUnitTestRunner {
 
 }

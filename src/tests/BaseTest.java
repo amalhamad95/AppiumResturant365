@@ -23,7 +23,6 @@ public class BaseTest {
 	public static final long WAIT = 3 * 1000;
 
 	public BaseTest() {
-//		PageFactory.initElements(new AppiumFieldDecorator(driver), this);
 		PageFactory.initElements(new AppiumFieldDecorator(driver, Duration.ofSeconds(WAIT)), this);
 	}
 
@@ -38,8 +37,8 @@ public class BaseTest {
 		File app = new File("app\\R365dev.apk");
 		caps.setCapability(MobileCapabilityType.APP, app.getAbsolutePath());
 
-//		caps.setCapability("appPackage", "com.restaurant365.dev");
-//		caps.setCapability("appActivity", "com.restaurant365.ui.login.LoginActivity");
+		caps.setCapability("appPackage", "com.restaurant365.dev");
+		caps.setCapability("appActivity", "com.restaurant365.ui.splash.SplashActivity");
 
 		try {
 			driver = new AndroidDriver<MobileElement>(new URL("http://127.0.0.1:4723/wd/hub"), caps);

@@ -1,7 +1,5 @@
 package tests;
 
-import java.util.Random;
-
 import org.junit.FixMethodOrder;
 import org.junit.Test;
 import org.junit.runners.MethodSorters;
@@ -17,6 +15,9 @@ public class InventoryCountTests {
 	InventoryCountActions actions = new InventoryCountActions();
 	InventoryCountAssertions assertions = new InventoryCountAssertions();
 
+//	Random random = new Random();
+//	int quantity = random.nextInt(99 - 1 + 1) + 1;
+
 	StorageLocation storageLocation = new StorageLocation();
 	StorageItem storageItem = new StorageItem();
 
@@ -25,8 +26,8 @@ public class InventoryCountTests {
 		actions.openNavigationMenu()//
 				.navigateToInventoryCount();
 
-		assertions.//
-				verifyInventoryCountIsOpened()//
+		assertions//
+				.verifyInventoryCountIsOpened()//
 				.verifyInProgressTabIsSelected();
 	}
 
@@ -39,7 +40,7 @@ public class InventoryCountTests {
 
 	@Test
 	public void TC03_verifyErrorMessageAppearsWhenSearchForInvalidInput() {
-		actions.typeInSearchInput("abcdefg");
+		actions.typeInSearchInput("abcdef");
 		assertions.verifyNoResultsFoundIsDisplayed();
 	}
 
@@ -69,12 +70,22 @@ public class InventoryCountTests {
 
 	@Test
 	public void TC07_verifyManagerCanChangeItemQuantity() {
-		Random random = new Random();
-		int quantity = random.nextInt(99 - 1 + 1) + 1;
+		int quantity = actions.fillQuantityInput();
+		storageItem.setQuantity(quantity);
+		System.out.println("getQuantity: " + storageItem.getQuantity());
 
-		actions//
-				.typeInItemQuantityInput(quantity + "")//
-				.closeItemDetailsDialog();
+		actions.closeItemDetailsDialog();
+//		actions.typeInItemQuantityInput(quantity + "").closeItemDetailsDialog();
+	}
+
+	@Test
+	public void TC08_verifyItemQuantityChanged() {
+		assertions.verifyItemQuantityReflected(storageItem.getQuantity());
+	}
+
+	@Test
+	public void TC09_verifyTotalCosts() {
+		assertions.verifyTotalCostChanges();
 	}
 
 }

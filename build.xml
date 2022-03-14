@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- WARNING: Eclipse auto-generated file.
+              Any modifications will be overwritten.
+              To include a user specific buildfile here, simply create one in the same
+              directory with the processing instruction <?eclipse.ant.import?>
+              as the first entry and export the buildfile again. --><project basedir="." default="build" name="AppiumResturant365">
+    <property environment="env"/>
+    <property name="ECLIPSE_HOME" value="C:/Users/HP/eclipse/java-2021-12/eclipse/"/>
+    <property name="junit.output.dir" value="junit"/>
+    <property name="debuglevel" value="source,lines,vars"/>
+    <property name="target" value="11"/>
+    <property name="source" value="11"/>
+    <path id="Maven Dependencies.libraryclasspath">
+        <pathelement location="C:/Users/HP/.m2/repository/io/appium/java-client/7.6.0/java-client-7.6.0.jar"/>
+        <pathelement location="C:/Users/HP/.m2/repository/org/seleniumhq/selenium/selenium-java/3.141.59/selenium-java-3.141.59.jar"/>
+        <pathelement location="C:/Users/HP/.m2/repository/org/seleniumhq/selenium/selenium-chrome-driver/3.141.59/selenium-chrome-driver-3.141.59.jar"/>
+        <pathelement location="C:/Users/HP/.m2/repository/org/seleniumhq/selenium/selenium-edge-driver/3.141.59/selenium-edge-driver-3.141.59.jar"/>
+        <pathelement location="C:/Users/HP/.m2/repository/org/seleniumhq/selenium/selenium-firefox-driver/3.141.59/selenium-firefox-driver-3.141.59.jar"/>
+        <pathelement location="C:/Users/HP/.m2/repository/org/seleniumhq/selenium/selenium-ie-driver/3.141.59/selenium-ie-driver-3.141.59.jar"/>
+        <pathelement location="C:/Users/HP/.m2/repository/org/seleniumhq/selenium/selenium-opera-driver/3.141.59/selenium-opera-driver-3.141.59.jar"/>
+        <pathelement location="C:/Users/HP/.m2/repository/org/seleniumhq/selenium/selenium-remote-driver/3.141.59/selenium-remote-driver-3.141.59.jar"/>
+        <pathelement location="C:/Users/HP/.m2/repository/org/seleniumhq/selenium/selenium-safari-driver/3.141.59/selenium-safari-driver-3.141.59.jar"/>
+        <pathelement location="C:/Users/HP/.m2/repository/net/bytebuddy/byte-buddy/1.8.15/byte-buddy-1.8.15.jar"/>
+        <pathelement location="C:/Users/HP/.m2/repository/org/apache/commons/commons-exec/1.3/commons-exec-1.3.jar"/>
+        <pathelement location="C:/Users/HP/.m2/repository/com/google/guava/guava/25.0-jre/guava-25.0-jre.jar"/>
+        <pathelement location="C:/Users/HP/.m2/repository/com/google/code/findbugs/jsr305/1.3.9/jsr305-1.3.9.jar"/>
+        <pathelement location="C:/Users/HP/.m2/repository/org/checkerframework/checker-compat-qual/2.0.0/checker-compat-qual-2.0.0.jar"/>
+        <pathelement location="C:/Users/HP/.m2/repository/com/google/errorprone/error_prone_annotations/2.1.3/error_prone_annotations-2.1.3.jar"/>
+        <pathelement location="C:/Users/HP/.m2/repository/com/google/j2objc/j2objc-annotations/1.1/j2objc-annotations-1.1.jar"/>
+        <pathelement location="C:/Users/HP/.m2/repository/org/codehaus/mojo/animal-sniffer-annotations/1.14/animal-sniffer-annotations-1.14.jar"/>
+        <pathelement location="C:/Users/HP/.m2/repository/com/squareup/okhttp3/okhttp/3.11.0/okhttp-3.11.0.jar"/>
+        <pathelement location="C:/Users/HP/.m2/repository/com/squareup/okio/okio/1.14.0/okio-1.14.0.jar"/>
+        <pathelement location="C:/Users/HP/.m2/repository/org/seleniumhq/selenium/selenium-support/3.141.59/selenium-support-3.141.59.jar"/>
+        <pathelement location="C:/Users/HP/.m2/repository/org/seleniumhq/selenium/selenium-api/3.141.59/selenium-api-3.141.59.jar"/>
+        <pathelement location="C:/Users/HP/.m2/repository/com/google/code/gson/gson/2.8.8/gson-2.8.8.jar"/>
+        <pathelement location="C:/Users/HP/.m2/repository/org/apache/httpcomponents/httpclient/4.5.13/httpclient-4.5.13.jar"/>
+        <pathelement location="C:/Users/HP/.m2/repository/org/apache/httpcomponents/httpcore/4.4.13/httpcore-4.4.13.jar"/>
+        <pathelement location="C:/Users/HP/.m2/repository/commons-logging/commons-logging/1.2/commons-logging-1.2.jar"/>
+        <pathelement location="C:/Users/HP/.m2/repository/commons-codec/commons-codec/1.11/commons-codec-1.11.jar"/>
+        <pathelement location="C:/Users/HP/.m2/repository/cglib/cglib/3.3.0/cglib-3.3.0.jar"/>
+        <pathelement location="C:/Users/HP/.m2/repository/org/ow2/asm/asm/7.1/asm-7.1.jar"/>
+        <pathelement location="C:/Users/HP/.m2/repository/commons-validator/commons-validator/1.7/commons-validator-1.7.jar"/>
+        <pathelement location="C:/Users/HP/.m2/repository/commons-beanutils/commons-beanutils/1.9.4/commons-beanutils-1.9.4.jar"/>
+        <pathelement location="C:/Users/HP/.m2/repository/commons-digester/commons-digester/2.1/commons-digester-2.1.jar"/>
+        <pathelement location="C:/Users/HP/.m2/repository/commons-collections/commons-collections/3.2.2/commons-collections-3.2.2.jar"/>
+        <pathelement location="C:/Users/HP/.m2/repository/org/apache/commons/commons-lang3/3.12.0/commons-lang3-3.12.0.jar"/>
+        <pathelement location="C:/Users/HP/.m2/repository/commons-io/commons-io/2.11.0/commons-io-2.11.0.jar"/>
+        <pathelement location="C:/Users/HP/.m2/repository/org/springframework/spring-context/5.3.10/spring-context-5.3.10.jar"/>
+        <pathelement location="C:/Users/HP/.m2/repository/org/springframework/spring-aop/5.3.10/spring-aop-5.3.10.jar"/>
+        <pathelement location="C:/Users/HP/.m2/repository/org/springframework/spring-beans/5.3.10/spring-beans-5.3.10.jar"/>
+        <pathelement location="C:/Users/HP/.m2/repository/org/springframework/spring-core/5.3.10/spring-core-5.3.10.jar"/>
+        <pathelement location="C:/Users/HP/.m2/repository/org/springframework/spring-jcl/5.3.10/spring-jcl-5.3.10.jar"/>
+        <pathelement location="C:/Users/HP/.m2/repository/org/springframework/spring-expression/5.3.10/spring-expression-5.3.10.jar"/>
+        <pathelement location="C:/Users/HP/.m2/repository/org/aspectj/aspectjweaver/1.9.7/aspectjweaver-1.9.7.jar"/>
+        <pathelement location="C:/Users/HP/.m2/repository/org/slf4j/slf4j-api/1.7.32/slf4j-api-1.7.32.jar"/>
+        <pathelement location="C:/Users/HP/.m2/repository/junit/junit/4.13.1/junit-4.13.1.jar"/>
+        <pathelement location="C:/Users/HP/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar"/>
+    </path>
+    <path id="JUnit 4.libraryclasspath">
+        <pathelement location="C:/Users/HP/.p2/pool/plugins/org.junit_4.13.2.v20211018-1956.jar"/>
+        <pathelement location="C:/Users/HP/.p2/pool/plugins/org.hamcrest.core_1.3.0.v20180420-1519.jar"/>
+    </path>
+    <path id="AppiumResturant365.classpath">
+        <pathelement location="target/classes"/>
+        <path refid="Maven Dependencies.libraryclasspath"/>
+        <path refid="JUnit 4.libraryclasspath"/>
+    </path>
+    <path id="run.InventoryCountTests (1).classpath">
+        <path refid="AppiumResturant365.classpath"/>
+        <path refid="Maven Dependencies.libraryclasspath"/>
+    </path>
+    <path id="run.JUnitTestRunner (2).classpath">
+        <path refid="AppiumResturant365.classpath"/>
+        <path refid="Maven Dependencies.libraryclasspath"/>
+    </path>
+    <target name="init">
+        <mkdir dir="target/classes"/>
+        <copy includeemptydirs="false" todir="target/classes">
+            <fileset dir="src">
+                <exclude name="**/*.launch"/>
+                <exclude name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="clean">
+        <delete dir="target/classes"/>
+    </target>
+    <target depends="clean" name="cleanall"/>
+    <target depends="build-subprojects,build-project" name="build"/>
+    <target name="build-subprojects"/>
+    <target depends="init" name="build-project">
+        <echo message="${ant.project.name}: ${ant.file}"/>
+        <javac debug="true" debuglevel="${debuglevel}" destdir="target/classes" includeantruntime="false" source="${source}" target="${target}">
+            <src path="src"/>
+            <classpath refid="AppiumResturant365.classpath"/>
+        </javac>
+    </target>
+    <target description="Build all projects which reference this project. Useful to propagate changes." name="build-refprojects"/>
+    <target description="copy Eclipse compiler jars to ant lib directory" name="init-eclipse-compiler">
+        <copy todir="${ant.library.dir}">
+            <fileset dir="${ECLIPSE_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar"/>
+        </copy>
+        <unzip dest="${ant.library.dir}">
+            <patternset includes="jdtCompilerAdapter.jar"/>
+            <fileset dir="${ECLIPSE_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar"/>
+        </unzip>
+    </target>
+    <target description="compile project with Eclipse compiler" name="build-eclipse-compiler">
+        <property name="build.compiler" value="org.eclipse.jdt.core.JDTCompilerAdapter"/>
+        <antcall target="build"/>
+    </target>
+    <target name="InventoryCountTests (1)">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="tests.InventoryCountTests" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="run.InventoryCountTests (1).classpath"/>
+        </junit>
+    </target>
+    <target name="JUnitTestRunner (2)">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="runners.JUnitTestRunner" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="run.JUnitTestRunner (2).classpath"/>
+        </junit>
+    </target>
+    <target name="junitreport">
+        <junitreport todir="${junit.output.dir}">
+            <fileset dir="${junit.output.dir}">
+                <include name="TEST-*.xml"/>
+            </fileset>
+            <report format="frames" todir="${junit.output.dir}"/>
+        </junitreport>
+    </target>
+</project>
